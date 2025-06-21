@@ -1,34 +1,24 @@
 // src/main.ts
-import './style.css';
-import { createRouter } from './utils/router';
-import { HomePage, AboutPage, ContactPage } from './components/pages';
+import './style.css'
+import { HomePage, AboutPage, ContactPage, ContactsList } from './components/pages'
 
-// Initialize app
-function initApp() {
-  const app = document.querySelector<HTMLDivElement>('#app');
-  
-  if (!app) {
-    console.error('App root element not found');
-    return;
-  }
-
-  // Create and configure router
-  const router = createRouter(app);
-  
-  // Define routes
-  router
-    .addRoute('/', HomePage, 'Home - My App')
-    .addRoute('/about', AboutPage, 'About Us - My App')
-    .addRoute('/contact', ContactPage, 'Contact Us - My App')
-    // .addRoute('/contacts', ContactsList, 'Contacts List - My App');
-
-  // Start router
-  router.start();
+// Define pages
+const pages = {
+  home: HomePage,
+  about: AboutPage,
+  contact: ContactPage,
+  contacts: ContactsList,  // Added Contacts List
 }
 
-// Wait for DOM to be ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initApp);
-} else {
-  initApp();
+// Router function
+function router() {
+  const app = document.querySelector<HTMLDivElement>('#app')!
+  const route = window.location.hash.slice(2) || 'home'
+  const page = pages[route as keyof typeof pages] || pages.home
+  
+  app.innerHTML = page()
 }
+
+// Initialize router
+window.addEventListener('hashchange', router)
+window.addEventListener('DOMContentLoaded', router)

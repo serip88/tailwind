@@ -21,8 +21,11 @@ export const BaseLayout = ({ title, content, currentRoute = 'home' }: LayoutProp
               <a href="#/about" class="${currentRoute === 'about' ? 'text-blue-600 font-semibold' : 'text-gray-600 hover:text-blue-600'} transition-colors">
                 About
               </a>
+              <a href="#/contacts" class="${currentRoute === 'contacts' ? 'text-blue-600 font-semibold' : 'text-gray-600 hover:text-blue-600'} transition-colors">
+                Contacts
+              </a>
               <a href="#/contact" class="${currentRoute === 'contact' ? 'text-blue-600 font-semibold' : 'text-gray-600 hover:text-blue-600'} transition-colors">
-                Contact
+                Contact Us
               </a>
             </nav>
           </div>
@@ -36,7 +39,7 @@ export const BaseLayout = ({ title, content, currentRoute = 'home' }: LayoutProp
       <footer class="bg-white border-t border-gray-200 mt-auto">
         <div class="max-w-6xl mx-auto px-8 py-6">
           <p class="text-center text-gray-500 text-sm">
-            © 2025 My App. Built with Tailwind CSS v4 + TypeScript.1
+            © 2025 My App. Built with Tailwind CSS v4 + TypeScript
           </p>
         </div>
       </footer>

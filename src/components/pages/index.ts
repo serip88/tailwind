@@ -3,6 +3,9 @@ import { HomeLayout } from '../layouts/HomeLayout';
 import { BaseLayout } from '../layouts/BaseLayout';
 import { ContactLayout } from '../layouts/ContactLayout';
 
+// Export ContactsList
+export { ContactsList } from './ContactsList';
+
 // Home Page
 export const HomePage = (): string => {
   const content = `
