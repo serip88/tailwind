@@ -1,7 +1,7 @@
 // src/components/pages/index.ts
-import { HomeLayout } from '../HomeLayout';
-import { BaseLayout } from '../BaseLayout';
-import { ContactLayout } from '../ContactLayout';
+import { HomeLayout } from '../layouts/HomeLayout';
+import { BaseLayout } from '../layouts/BaseLayout';
+import { ContactLayout } from '../layouts/ContactLayout';
 
 // Home Page
 export const HomePage = (): string => {
