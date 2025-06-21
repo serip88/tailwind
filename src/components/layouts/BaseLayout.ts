@@ -36,7 +36,7 @@ export const BaseLayout = ({ title, content, currentRoute = 'home' }: LayoutProp
       <footer class="bg-white border-t border-gray-200 mt-auto">
         <div class="max-w-6xl mx-auto px-8 py-6">
           <p class="text-center text-gray-500 text-sm">
-            © 2025 My App. Built with Tailwind CSS v4 + TypeScript
+            © 2025 My App. Built with Tailwind CSS v4 + TypeScript.1
           </p>
         </div>
       </footer>
