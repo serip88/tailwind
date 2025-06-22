@@ -84,6 +84,7 @@ export const HomeLayout = ({ title, content }: HomeLayoutProps): string => {
               <a href="#/about" class="text-gray-300 hover:text-white transition-colors">About</a>
               <a href="#/contact" class="text-gray-300 hover:text-white transition-colors">Contact</a>
               <a href="#/contacts" class="text-gray-300 hover:text-white transition-colors">Contacts</a>
+              <a href="#/products" class="text-gray-300 hover:text-white transition-colors">Products</a>
             </div>
             <p class="text-gray-400 text-sm">
               © 2025 My App. Built with Tailwind CSS v4 + TypeScript.3

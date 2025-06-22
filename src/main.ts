@@ -1,6 +1,6 @@
 // src/main.ts
 import './style.css'
-import { HomePage, AboutPage, ContactPage, ContactsList } from './components/pages'
+import { HomePage, AboutPage, ContactPage, ContactsList, ProductPage } from './components/pages'
 
 // Define pages
 const pages = {
@@ -8,6 +8,7 @@ const pages = {
   about: AboutPage,
   contact: ContactPage,
   contacts: ContactsList,  // Added Contacts List
+  products: ProductPage,
 }
 
 // Router function

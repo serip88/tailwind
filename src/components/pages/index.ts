@@ -2,9 +2,53 @@
 import { HomeLayout } from '../layouts/HomeLayout';
 import { BaseLayout } from '../layouts/BaseLayout';
 import { ContactLayout } from '../layouts/ContactLayout';
-
-// Export ContactsList
+import { ProductLayout } from '../layouts/ProductLayout';
+import type { Product } from '../layouts/ProductLayout';
 export { ContactsList } from './ContactsList';
+
+
+// Sample products data
+const sampleProducts: Product[] = [
+  {
+    id: 1,
+    name: "Wireless Noise-Canceling Headphones",
+    price: 199.99,
+    originalPrice: 299.99,
+    description: "Premium over-ear headphones with active noise cancellation, 30-hour battery life, and superior sound quality.",
+    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop",
+    category: "Electronics",
+    rating: 5,
+    reviews: 234,
+    badge: "Best Seller",
+    inStock: true
+  },
+  {
+    id: 2,
+    name: "Smart Watch Pro 2024",
+    price: 349.00,
+    originalPrice: 449.00,
+    description: "Advanced fitness tracking, heart rate monitoring, GPS, and seamless smartphone integration with 7-day battery life.",
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
+    category: "Electronics",
+    rating: 4,
+    reviews: 189,
+    badge: "New",
+    inStock: true
+  },
+  {
+    id: 3,
+    name: "Minimalist Leather Backpack",
+    price: 89.99,
+    originalPrice: 132,
+    description: "Handcrafted genuine leather backpack with laptop compartment, multiple pockets, and timeless design.",
+    image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&h=500&fit=crop",
+    category: "Fashion",
+    rating: 4,
+    reviews: 67,
+    badge: "New",
+    inStock: false
+  }
+];
 
 // Home Page
 export const HomePage = (): string => {
@@ -39,6 +83,14 @@ export const HomePage = (): string => {
   return HomeLayout({
     title: 'Home Page',
     content
+  });
+};
+
+// Product List Page
+export const ProductPage = (): string => {
+  return ProductLayout({
+    title: 'Our Products',
+    products: sampleProducts
   });
 };
 
