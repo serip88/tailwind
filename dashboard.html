@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Sidebar -->
+    <div id="sidebar" class="fixed inset-y-0 left-0 w-64 bg-gray-800 text-white transform transition-transform duration-300 ease-in-out lg:translate-x-0">
+        <div class="flex items-center justify-center h-16 bg-gray-900">
+            <h1 class="text-xl font-bold">CRM System</h1>
+        </div>
+        <nav class="mt-8">
+            <a href="#dashboard" class="flex items-center px-6 py-3 bg-gray-700 border-r-4 border-blue-500">
+                <span class="text-sm font-medium">Dashboard</span>
+            </a>
+            <a href="#contacts" class="flex items-center px-6 py-3 hover:bg-gray-700 transition">
+                <span class="text-sm font-medium">Contacts</span>
+            </a>
+            <a href="#leads" class="flex items-center px-6 py-3 hover:bg-gray-700 transition">
+                <span class="text-sm font-medium">Leads</span>
+            </a>
+            <a href="#deals" class="flex items-center px-6 py-3 hover:bg-gray-700 transition">
+                <span class="text-sm font-medium">Deals</span>
+            </a>
+            <a href="#reports" class="flex items-center px-6 py-3 hover:bg-gray-700 transition">
+                <span class="text-sm font-medium">Reports</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lg:ml-64">
+        <!-- Header -->
+        <header id="header" class="bg-white shadow-sm border-b">
+            <div class="flex items-center justify-between px-6 py-4">
+                <!-- Left: Breadcrumb -->
+                <div class="flex items-center">
+                    <button class="lg:hidden mr-4 p-2 rounded-md hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                    <nav class="flex">
+                        <span class="text-gray-500 text-sm">Dashboard</span>
+                        <span class="mx-2 text-gray-400">/</span>
+                        <span class="text-gray-900 text-sm font-medium">Overview</span>
+                    </nav>
+                </div>
+
+                <!-- Right: Search, Notifications, Profile -->
+                <div class="flex items-center space-x-4">
+                    <!-- Search -->
+                    <div class="relative">
+                        <input type="text" placeholder="Search..." class="w-64 pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <svg class="absolute left-3 top-2.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+
+                    <!-- Notifications -->
+                    <button class="relative p-2 rounded-full hover:bg-gray-100">
+                        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5v-5z"></path>
+                        </svg>
+                        <span class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">3</span>
+                    </button>
+
+                    <!-- User Profile -->
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                            <span class="text-white text-sm font-medium">JD</span>
+                        </div>
+                        <span class="text-sm font-medium text-gray-700">John Doe</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main id="main-content" class="p-6">
+            <!-- KPIs Section -->
+            <section id="kpis" class="mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold text-gray-700">Total Contacts</h3>
+                        <p class="text-3xl font-bold text-blue-600 mt-2">1,234</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold text-gray-700">Active Leads</h3>
+                        <p class="text-3xl font-bold text-green-600 mt-2">456</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold text-gray-700">Deals Won</h3>
+                        <p class="text-3xl font-bold text-purple-600 mt-2">78</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold text-gray-700">Revenue</h3>
+                        <p class="text-3xl font-bold text-orange-600 mt-2">$123K</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Charts Section -->
+            <section id="charts" class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Sales Chart -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-4">Sales Overview</h3>
+                    <div class="h-64 bg-gray-50 rounded flex items-center justify-center">
+                        <span class="text-gray-500">[Sales Chart Placeholder]</span>
+                    </div>
+                </div>
+
+                <!-- Pipeline Chart -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-4">Sales Pipeline</h3>
+                    <div class="h-64 bg-gray-50 rounded flex items-center justify-center">
+                        <span class="text-gray-500">[Pipeline Chart Placeholder]</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Activities -->
+            <section id="recent-activities" class="mt-8">
+                <div class="bg-white rounded-lg shadow">
+                    <div class="px-6 py-4 border-b">
+                        <h3 class="text-lg font-semibold text-gray-700">Recent Activities</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                                <span class="text-sm text-gray-600">New contact added: Sarah Johnson</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                                <span class="text-sm text-gray-600">Deal closed: ABC Corp - $25,000</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
+                                <span class="text-sm text-gray-600">Lead converted: Mike Chen</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Mobile sidebar toggle
+        const sidebarToggle = document.querySelector('button');
+        const sidebar = document.getElementById('sidebar');
+        
+        sidebarToggle?.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+        });
+    </script>
+</body>
+</html>
