@@ -6,6 +6,7 @@ export interface ContactLayoutProps {
 }
 
 export const ContactLayout = ({ title, content, currentRoute = 'contact' }: ContactLayoutProps): string => {
+  console.log('Rendering ContactLayout with currentRoute:', currentRoute);
   return `
     <div class="min-h-screen bg-gray-50">
       <!-- Header with Breadcrumb -->

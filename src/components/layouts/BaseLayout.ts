@@ -12,7 +12,7 @@ export const BaseLayout = ({ title, content, currentRoute = 'home' }: LayoutProp
         <div class="max-w-6xl mx-auto px-8 py-4">
           <div class="flex items-center justify-between">
             <h1 class="text-2xl font-bold text-primary">
-              <a href="#/" class="hover:text-blue-600 transition-colors">My App</a>
+              <a href="#/" class="hover:text-blue-600 transition-colors">My App ${title}</a>
             </h1>
             <nav class="flex gap-6">
               <a href="#/" class="${currentRoute === 'home' ? 'text-blue-600 font-semibold' : 'text-gray-600 hover:text-blue-600'} transition-colors">

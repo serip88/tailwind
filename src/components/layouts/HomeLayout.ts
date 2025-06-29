@@ -13,7 +13,7 @@ export const HomeLayout = ({ title, content }: HomeLayoutProps): string => {
         <div class="relative max-w-6xl mx-auto px-8 py-16">
           <div class="text-center">
             <h1 class="text-5xl font-bold text-gray-900 mb-4">
-              Welcome to My App
+              Welcome to My App ${title}
             </h1>
             <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
               Your modern web application built with Tailwind CSS v4 and TypeScript
