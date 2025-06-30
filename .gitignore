@@ -1,3 +1,5 @@
+node_modules_bk_ts/
+dist_bk_ts/
 # Logs
 logs
 *.log
