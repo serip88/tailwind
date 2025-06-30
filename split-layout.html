@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM Split-pane Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 h-screen flex flex-col">
+    <!-- Top Bar -->
+    <header id="top-bar" class="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+            <h1 class="text-xl font-semibold text-gray-800">CRM Dashboard</h1>
+            <div class="flex items-center space-x-2">
+                <input type="text" placeholder="Tìm kiếm..." class="px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="flex items-center space-x-2">
+            <select class="px-3 py-2 border border-gray-300 rounded-lg">
+                <option>Tất cả</option>
+                <option>Contacts</option>
+                <option>Leads</option>
+            </select>
+            <button class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">+ Thêm mới</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex overflow-hidden">
+        <!-- Left Panel - Records List -->
+        <section id="records-list" class="w-1/3 bg-white border-r border-gray-200 flex flex-col">
+            <div class="p-4 border-b border-gray-200">
+                <h2 class="font-semibold text-gray-800">Danh sách Records</h2>
+            </div>
+            <div class="flex-1 overflow-y-auto">
+                <!-- Record Item -->
+                <div class="p-4 border-b border-gray-100 hover:bg-gray-50 cursor-pointer">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-semibold">
+                            AB
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-medium text-gray-800">Nguyễn Văn A</h3>
+                            <p class="text-sm text-gray-500">nguyenvana@email.com</p>
+                            <p class="text-xs text-gray-400">Lead • Mới</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="p-4 border-b border-gray-100 hover:bg-gray-50 cursor-pointer bg-blue-50">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-semibold">
+                            CD
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-medium text-gray-800">Trần Thị B</h3>
+                            <p class="text-sm text-gray-500">tranthib@email.com</p>
+                            <p class="text-xs text-gray-400">Contact • Đang theo dõi</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="p-4 border-b border-gray-100 hover:bg-gray-50 cursor-pointer">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-semibold">
+                            EF
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-medium text-gray-800">Lê Văn C</h3>
+                            <p class="text-sm text-gray-500">levanc@email.com</p>
+                            <p class="text-xs text-gray-400">Lead • Quan tâm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Panel - Record Details -->
+        <section id="record-details" class="flex-1 bg-white flex flex-col">
+            <div class="p-6 border-b border-gray-200">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white text-xl font-semibold">
+                            TB
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-semibold text-gray-800">Trần Thị B</h2>
+                            <p class="text-gray-500">Contact • Đang theo dõi</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2">
+                        <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Chỉnh sửa</button>
+                        <button class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">Xóa</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex-1 overflow-y-auto p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-3">Thông tin liên hệ</h3>
+                        <div class="space-y-2">
+                            <p><span class="text-gray-500">Email:</span> tranthib@email.com</p>
+                            <p><span class="text-gray-500">Điện thoại:</span> +84 901 234 567</p>
+                            <p><span class="text-gray-500">Công ty:</span> ABC Company</p>
+                            <p><span class="text-gray-500">Chức vụ:</span> Marketing Manager</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-3">Trạng thái</h3>
+                        <div class="space-y-2">
+                            <p><span class="text-gray-500">Giai đoạn:</span> Đang theo dõi</p>
+                            <p><span class="text-gray-500">Nguồn:</span> Website</p>
+                            <p><span class="text-gray-500">Người phụ trách:</span> John Doe</p>
+                            <p><span class="text-gray-500">Cập nhật:</span> 2 giờ trước</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8">
+                    <h3 class="font-semibold text-gray-800 mb-3">Lịch sử hoạt động</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+                            <div>
+                                <p class="text-sm">Đã gửi email follow-up</p>
+                                <p class="text-xs text-gray-500">2 giờ trước</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg">
+                            <div class="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                            <div>
+                                <p class="text-sm">Đã gọi điện thoại</p>
+                                <p class="text-xs text-gray-500">1 ngày trước</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Simulate record selection
+        document.querySelectorAll('#records-list .cursor-pointer').forEach(item => {
+            item.addEventListener('click', function() {
+                // Remove active class from all items
+                document.querySelectorAll('#records-list .cursor-pointer').forEach(i => {
+                    i.classList.remove('bg-blue-50');
+                });
+                // Add active class to clicked item
+                this.classList.add('bg-blue-50');
+            });
+        });
+    </script>
+</body>
+</html>
